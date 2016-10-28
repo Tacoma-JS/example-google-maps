@@ -1,0 +1,11 @@
+### Getting location from ip address
+- [ipinfo.io](http://ipinfo.io/developers/full-ip-details)
+- [freegeoip.net](http://freegeoip.net)
+- [hostip.info](http://www.hostip.info/use.html)
+- [http://ipapi.co/](http://ipapi.co/)
+- [ipinfodb.com](http://ipinfodb.com/ip_location_api.php)
+- [geoplugin.com](http://www.geoplugin.com/webservices/javascript) 
+- Downloadable
+  - [dev.maxmind.com](http://dev.maxmind.com/geoip/geoip2/geolite2/)
+  - [db-ip.com/db](https://db-ip.com/db)
+- ( gleaned from comments on [SO](http://stackoverflow.com/questions/409999/getting-the-location-from-an-ip-address) questions/409999 )
