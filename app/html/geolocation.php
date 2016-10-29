@@ -28,18 +28,11 @@
 <button id="resetTheApiKey" class="btn btn-default">Reset Api Key</button>
 
 <script>
-  /*global $ */
+  /*global $ google*/
   var geocoder;
   var map;
   var pos;
-  $.getJSON('http://ipinfo.io', function(locationData,status){
-      if(status === "success") {
-          console.log("ipinfo.io status: " + status);//debug only
-          loadTheMap(locationData);
-      }else{
-          console.log("ipinfo.io status: " + status);//debug only
-      }
-  });
+
 
 
 
@@ -111,7 +104,6 @@
     <input type="button" value="Encode" onclick="codeAddress()">
   </div>
 </div>
-
 
 </body>
 </html>

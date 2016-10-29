@@ -20,10 +20,22 @@ egm = (function funcEGM ($){
             var mapsAPIloader = $.getScript(uri)
              .done(function( script, textStatus ) {
                 console.log( "In function init1, in function $.getScript: " + textStatus );
+                
+                      $.getJSON('http://ipinfo.io', function(locationData,status){
+                          if(status === "success") {
+                              console.log("ipinfo.io status: " + status);//debug only
+                              loadTheMap(locationData);
+                          }else{
+                              console.log("ipinfo.io status: " + status);//debug only
+                          }
+                      });             
              })
              .fail(function( jqxhr, settings, exception ) {
                  console.log("Failed to load google maps API in funcINIT1.");
              });
+             
+             
+             
         };
 
     return {
