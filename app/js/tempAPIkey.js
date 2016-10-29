@@ -21,7 +21,7 @@ var tak = temporaryAPIkey = (function funcTAK (){
             localStorage.setItem("apiKey", apiKey);
         },
 
-        getApiKey = function () {
+        getApiKey = function funcGETAPIKEY () {
 
             if (_apiKey === null) {
                 setApiKey(localStorage.getItem("apiKey"));
@@ -31,11 +31,16 @@ var tak = temporaryAPIkey = (function funcTAK (){
                 setApiKey(prompt("Please enter your temporary API Key"));
             }
             return _apiKey;
+        },
+        
+        ResetApiKey = function funcRESETAPIKEY () {
+           setApiKey(prompt("Please enter your temporary API Key"));
         };
 
     return {
         setApiKey : setApiKey,
         getApiKey : getApiKey,
+        ResetApiKey : ResetApiKey,
         version : version
     };
 

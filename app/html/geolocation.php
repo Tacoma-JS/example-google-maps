@@ -5,11 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <!-- The theme bootswatch Sandstone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/sandstone/bootstrap.min.css">    
+
     <!-- Application specific scripts -->
     <script type="text/javascript" src="../js/tempAPIkey.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/ux.js"></script>
 </head>
 <body>
 <div class="well">Geocoding example</div>
@@ -22,23 +25,17 @@
   </div>
 </div>
 
-<!--
-
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8UhPDpRY2n00z0IXsPu64FRlD1Gyq7Kc">
-</script>
--->
-
+<button id="resetTheApiKey" class="btn btn-default">Reset Api Key</button>
 
 <script>
   /*global $ */
   var geocoder;
   var map;
   var pos;
-  $.getJSON('http://ipinfo.io', function(data,status){
+  $.getJSON('http://ipinfo.io', function(locationData,status){
       if(status === "success") {
           console.log("ipinfo.io status: " + status);//debug only
-          initialize(data);
+          loadTheMap(locationData);
       }else{
           console.log("ipinfo.io status: " + status);//debug only
       }
@@ -46,7 +43,7 @@
 
 
 
-  function initialize(initial) {
+  function loadTheMap(initial) {
     var aryInitLoc = initial.loc.split(",");
     var objInitialCenter = {"lat":Number(aryInitLoc[0]),"lng":Number(aryInitLoc[1])};
     geocoder = new google.maps.Geocoder();
@@ -110,7 +107,7 @@
 <div id="locationLatLng"></div>
 
   <div>
-    <input id="address" type="textbox" value="Sydney, NSW">
+    <input id="address" type="textbox" value="Tacoma, WA">
     <input type="button" value="Encode" onclick="codeAddress()">
   </div>
 </div>
