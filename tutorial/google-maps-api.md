@@ -1,11 +1,7 @@
 # Google Maps API's [:link:](https://developers.google.com/maps/)
-
 - Javascript Reference [:link:](https://developers.google.com/maps/documentation/javascript/reference)
+- Console [:link:](https://console.developers.google.com) (must be logged in)
 
-### Tutorials
-
-- Javascript [:link:](https://developers.google.com/maps/documentation/javascript/tutorial)
-- Geocode [:link:](https://developers.google.com/maps/documentation/geocoding/start)
 
 ### Route Optimization (trip planner)
 - [Optimap](http://gebweb.net/optimap/)
@@ -13,14 +9,3 @@
 ### Directions
 - Get [directions](http://www.dreamdealer.nl/tutorials/getting_directions_with_google_maps.html)
 
-### Getting location from ip address
-- [ipinfo.io](http://ipinfo.io/developers/full-ip-details)
-- [freegeoip.net](http://freegeoip.net)
-- [hostip.info](http://www.hostip.info/use.html)
-- [http://ipapi.co/](http://ipapi.co/)
-- [ipinfodb.com](http://ipinfodb.com/ip_location_api.php)
-- [geoplugin.com](http://www.geoplugin.com/webservices/javascript) 
-- Downloadable
-  - [dev.maxmind.com](http://dev.maxmind.com/geoip/geoip2/geolite2/)
-  - [db-ip.com/db](https://db-ip.com/db)
-- ( gleaned from comments on [SO](http://stackoverflow.com/questions/409999/getting-the-location-from-an-ip-address) questions/409999 )

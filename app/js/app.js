@@ -18,13 +18,12 @@ egm = (function funcEGM ($){
             var uri = "https://maps.googleapis.com/maps/api/js?key=" + tak.getApiKey();
             console.log("in function init1 uri: "+uri);
             console.log("Is this next line of code blocked by CORS policy?");
-            var mapsAPIloader = $.get(uri)
-             .done(function( data ) {
-                 alert( "Google api key Data Loaded: " + data );
+            var mapsAPIloader = $.getScript(uri)
+             .done(function( script, textStatus ) {
+                console.log( "In function init1, in function $.getScript: " + textStatus );
              })
-             .fail(function(err) {
-                 console.log( "Failed to receive mapsAPIloader, check for CORS error.");
-                 console.dir(err);
+             .fail(function( jqxhr, settings, exception ) {
+                 console.log("Failed to load google maps API in funcINIT1.");
              });
         };
 
