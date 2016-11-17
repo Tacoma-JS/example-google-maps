@@ -3,18 +3,31 @@
 <head>
     <title>EGM - geolocation </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!-- The theme bootswatch Sandstone -->
+    -->
+    <!-- The theme bootswatch Sandstone 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/sandstone/bootstrap.min.css">    
-
-    <!-- Application specific scripts -->
+     -->
+     
+    <!-- Application specific scripts 
     <script type="text/javascript" src="../js/tempAPIkey.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../js/ux.js"></script>
+    -->
 </head>
 <body>
+
+<!-- The order of loading here matters; LILO, so put lib loader first! -->
+<!-- Loads stuff like jQuery and bootstrap and theme css  into the html head tag -->  
+<script type="text/javascript" src="../js/loaders/load_requisite_libraries_for_this_app.js" defer></script>
+
+<!-- Loads the application specific scripts into the html head tag -->  
+<script type="text/javascript" src="../js/loaders/load_requisite_modules_for_this_app.js" defer></script>
+
+
+  
 <div class="well">Geocoding example</div>
 
 <div class="panel panel-default">

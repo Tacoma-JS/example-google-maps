@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Jasmine SpecRunner</title>
+    <!-- https://jasmine.github.io/ -->
     <meta charset="utf-8">
     <!-- cdnjs.cloudflare.com -->
     <!-- Jasmine -->
@@ -9,15 +10,20 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/jasmine.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/jasmine-html.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.5.2/boot.min.js"></script>
-
-    
-    <!-- code to be tested -->
-
-    <!-- test specs -->
-    
 </head>
 
 <body>
+    <!-- The order of loading here matters; FIFO, so put lib loader first! -->
+    <!-- Loads stuff like jQuery and bootstrap and theme css  into the html head tag -->  
+    <script type="text/javascript" src="../js/loaders/load_requisite_libraries_for_this_app.js" defer></script>
 
+    <!-- Loads the application specific scripts into the html head tag -->  
+        <!-- code to be tested -->
+    <script type="text/javascript" src="../js/loaders/load_requisite_modules_for_this_app.js" defer></script>
+
+    <!-- test specs -->
+    <script type="text/javascript" src="./specs/loaders/load_specifications_into_SpecRunner.js" defer></script>
+
+<!-- test results auto populate here ;) -->
 </body>
 </html>
