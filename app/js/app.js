@@ -1,9 +1,11 @@
-/*global jQuery tak getApiKey*/
+/*global jQuery tak getApiKey loadTheMap*/
 
 /** file: app.js
 
     Show off some different examples of accessing the google maps API.
-    
+
+    prerequisites:
+        requires jQuery to be installed first
 */
 
 var egm = {};//example google maps
