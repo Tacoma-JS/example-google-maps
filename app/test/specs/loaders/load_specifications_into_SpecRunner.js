@@ -14,10 +14,19 @@
  * 
  */
  
- 
- /** Scripts */
- [  './specs/app_spec.js'
-].forEach(function(src) {
+/** User interface test modules with jQuery
+  *   https://github.com/velesin/jasmine-jquery
+  *   Tutorial
+  *     http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html
+*/ 
+var jjq = ["https://rawgit.com/velesin/jasmine-jquery/master/lib/jasmine-jquery.js"]; 
+
+/** Scripts */
+var specs = [  './specs/app_spec1.js'];
+
+var scriptList = jjq.concat(specs);
+
+scriptList.forEach(function(src) {
   var script = document.createElement('script');
   script.src = src;
   script.async = false;
