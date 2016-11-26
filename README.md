@@ -10,4 +10,8 @@
  
 ## Startup url
 - current features of this application are being served at the link:
-  - /app/html/geolocation.html  
+  - /app/html/geolocation.html
+
+## Lessons learned
+- When the current location is downloaded from a website like [ipinfo.io](https://ipinfo.io) based on the IP address of the local router it can be more random than you might guess.  For example, if the owner of a hot spot is a large corporation with the address registered to Somewhere USA, that address may be what is displayed rather than your actual location.
+ 
