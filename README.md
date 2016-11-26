@@ -1,9 +1,13 @@
 # An example app demonstrating the Google Maps Javascript API
 
+## Google maps developer
+- [tutorial](https://developers.google.com/maps/documentation/javascript/tutorial)
+
 ## The API key
 - Access requires that you [get a key](https://developers.google.com/maps/documentation/javascript/) from google.
 - When prompted by this app enter the key which will be stored temporily in browser local storage.
-- In a production app the key would be owned and served by the app website and protected by settings you configure in the google console.
+- In a production app the key would be owned and served by the app website and protected by settings you configure while logged into the google [console](https://console.developers.google.com/).
  
-## Startup
-- 
+## Startup url
+- current features of this application are being served at the link:
+  - /app/html/geolocation.html  
